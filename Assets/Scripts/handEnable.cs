@@ -21,6 +21,4 @@ public class handEnable : MonoBehaviour
             leftHand.SetActive(true);
         }
     }
-
-
 }
