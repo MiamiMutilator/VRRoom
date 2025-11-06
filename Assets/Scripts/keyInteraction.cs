@@ -7,6 +7,9 @@ public class keyInteraction : MonoBehaviour
     public GameObject managerRef;
     public GameObject fakeHand;
 
+    public GameObject[] keys;
+    public GameObject[] files;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,20 @@ public class keyInteraction : MonoBehaviour
         {
             managerRef.GetComponent<handEnable>().unlocked = true;
             Destroy(fakeHand.gameObject);
+
+            Destroy(keys[6]);
+            Destroy(keys[5]);
+            Destroy(keys[4]);
+            Destroy(keys[3]);
+            Destroy(keys[2]);
+            Destroy(keys[1]);
+            Destroy(keys[0]);
+
+            files[0].SetActive(true);
+            files[1].SetActive(true);
+            files[2].SetActive(true);
+            files[3].SetActive(true);
+
             Destroy(this.gameObject);
         }
     }
